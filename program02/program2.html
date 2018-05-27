@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<!--************************************************************************
+    * COPYRIGHT  : GNU General Public License: http://www.gnu.org/licenses/
+    *              See bottom of file for details.
+    * AUTHOR     : Brionna Spencer
+    * ASSIGNMENT : cis255 - Program 02 - HTML and Github
+    * URL        : csis.svsu.edu/~blspence/cis255/program02/program2.html
+    * OVERVIEW   : Favorite HTML Tags; HTML form inside an HTML table
+    ************************************************************************ -->
+
+<html lang="en">
+
+<head>
+    <!-- TAB-TITLE/FAVICON ************************************************* -->
+	<title>Brionna Spencer - Program 02</title>
+	<link rel="icon" href="cardinal_logo.png" type="image/png" />
+
+    <!-- METADATA ********************************************************** -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="author" content="Brionna Spencer" />
+	<meta name="copyright" content="Brionna Spencer" />
+	<meta name="keywords" content="web, development, client side, front end" />
+	<style>
+		.twoColumn
+        {
+            column-count: 2;
+        }
+		body
+        {
+			max-width: 750px;
+			margin: auto;
+			background: white;
+		}
+	</style>
+</head>
+
+<body>
+	<form action="https://github.com/blspence/cis255" target="_blank">
+		<input type="submit" value="Go to GitHub" />
+	</form>
+
+    <!-- NAME AND TITLE **************************************************** -->
+	<h1 align="center">Brionna Spencer</h1>
+	<h2 align="center">MY FAVORITE HTML TAGS</h2>
+
+    <!-- TABLE ************************************************************* -->
+	<div class="twoColumn">
+        <p> <!-- INTRODUCTION ********************************************** -->
+            <strong>Introduction</strong>.
+            The purpose of this essay is to describe my three favorite
+            Hypertext Markup Language (HTML) tags.
+        </p>
+        <hr />
+
+        <p> <!-- TAG #1 **************************************************** -->
+            <strong>&lt;iframe&gt;</strong>.
+            The <strong>inline frame</strong> tag is my #1 favorite HTML tag.
+            This tag embeds another document within the current HTML document.
+            It provides a flexible, yet straightforward, method for embedding.</br>
+            </br>
+            <i>Tag Implementation Reference: <a target="_blank"
+               href="https://developers.google.com/maps/documentation/embed/guide">
+               Maps Embed API</a>
+            </i></br>
+            <iframe
+              width="370" height="200"
+              frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAo3jlKHs_b4qTM7xHDcTe0lElFvCtBXk8
+                &q=The Tridge,Midland+MI" allowfullscreen>
+            </iframe>
+        </p>
+        <hr />
+
+        <p> <!-- TAG #2 **************************************************** -->
+            <strong>&lt;abbr&gt;</strong>.
+            The <strong>abbreviation</strong> tag is my #2 favorite HTML tag.
+            This tag allows users to hover over an abbreviation or acronym
+            to view the expanded version. This is useful for portraying
+            information while keeping the display visually appealing.</br>
+            </br>
+            <i>Tag Implementation Reference: <a target="_blank"
+               href="https://www.w3schools.com/tags/tag_abbr.asp">
+               HTML abbr Tag</a>
+            </i></br>
+            <abbr title="Saginaw Valley State University">SVSU</abbr> was founded in 1963.
+        </p>
+        <hr />
+
+        <p> <!-- TAG #3 **************************************************** -->
+            <strong>&lt;img&gt;</strong>.
+            The <strong>image </strong> tag is my #3 favorite HTML tag.
+            This tag defines an image in an HTML page. Images customize
+            webpages and improve the overall aesthetic. They can also be used
+            to depict information, such as mathematical figures.</br>
+            </br>
+            <i>Tag Implementation Reference: <a target="_blank"
+               href="https://www.w3schools.com/tags/tag_img.asp">
+               HTML img Tag</a>
+            </i></br>
+            <img src="cylinder_cross_section.png" alt="Cylinder Cross Section"
+                height="150" width="140">
+        </p>
+        <hr />
+
+        <p> <!-- CONCLUSION ************************************************ -->
+            <strong>Conclusion</strong>.
+            The inline frame tag, abbreviation tag, and image tag all contribute
+            to the structure of HTML documents. Each tag has its own purpose and
+            method of displaying content, which adds to the options developers
+            have when implmenting HTML.
+        </p>
+	</div>
+
+    </br><hr />
+    <h2>Course Lookup</h2>
+    <table style="width:100">
+        <form action='https://csis.svsu.edu/~gpcorser/php/courses.php'>
+            <tr>
+                <th bgcolor='lightblue' width='50%'>Course Prefix (Department)</th>
+                <td width='50%'><input type='text' name='prefix'></td>
+            </tr>
+            <tr>
+                <th bgcolor='lightblue' width='50%'>Course Number</th>
+                <td width='50%'><input type='text' name='courseNumber'></td>
+            </tr>
+            <tr>
+                <th bgcolor='lightblue' width='50%'>Instructor</th>
+                <td width='50%'><input type='text' name='instructor'></td>
+            </tr>
+            <tr>
+                <th width='50%'></th>
+                <td width='50%'><input type='submit' value='Submit'></td>
+            </tr>
+        </form>
+    </table>
+
+	<footer>
+		<p id="copyright">
+            &copy; 2018 Brionna Spencer.
+        </p>
+	</footer>
+</body>
+
+</html>
+
+<!-- COPYRIGHT NOTICE -->
+<!--************************************************************************
+    GNU General Public License (http://www.gnu.org/licenses/)
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    ************************************************************************ -->
