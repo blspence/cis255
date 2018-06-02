@@ -7,30 +7,37 @@
    * OVERVIEW   : Favorite CSS Properties; Chrome DevTool Demonstration
    ************************************************************************** */
 
-.twoColumn
+html
 {
-    column-count: 2;
+    font-family: "Calibri", sans-serif;
 }
-.shifted
-{
-    margin: 0 0 0 3em;
-    color: blue;
+
+#row {
+    float: left;
+    width: 100%;
 }
-body
-{
-    max-width: 750px;
-    margin: auto;
-    background: white;
+
+#column {
+    float: left;
+    width: 33.33%;
 }
-img
-{
-    border: 1px solid #d0d0d0; /* light gray */
-    border-radius: 5px;
+
+body {
+    text-align: left;
+         /* vertical | horizontal */
+    margin: auto       15%;
 }
-#catFloat
-{
-    float: right;
-    margin: 0.5em;
+
+/* Media Query: Mobile Portrait Mode */
+@media only screen and (max-device-width: 480px) {
+    #column {
+        font-size: 1vw;
+        width: 50%;
+    }
+    body {
+             /* vertical | horizontal */
+        margin: auto       10%;
+    }
 }
 
 /* COPYRIGHT NOTICE */
