@@ -1,0 +1,46 @@
+/* **************************************************************************
+   * COPYRIGHT  : GNU General Public License: http://www.gnu.org/licenses/
+   *              See bottom of file for details.
+   * AUTHOR     : Brionna Spencer
+   * ASSIGNMENT : cis255 - Program 03 - CSS and Chrome DevTools
+   * URL        : csis.svsu.edu/~blspence/cis255/program03/program03.css
+   * OVERVIEW   : Favorite CSS Properties; Chrome DevTool Demonstration
+   ************************************************************************** */
+
+.twoColumn
+{
+    column-count: 2;
+}
+.shifted
+{
+    margin: 0 0 0 3em;
+    color: blue;
+}
+body
+{
+    max-width: 750px;
+    margin: auto;
+    background: white;
+}
+img
+{
+    border: 1px solid #d0d0d0; /* light gray */
+    border-radius: 5px;
+}
+#catFloat
+{
+    float: right;
+    margin: 0.5em;
+}
+
+/* COPYRIGHT NOTICE */
+/* **************************************************************************
+   GNU General Public License (http://www.gnu.org/licenses/)
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+   ************************************************************************** */
