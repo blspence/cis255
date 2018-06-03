@@ -4,21 +4,22 @@
    * AUTHOR     : Brionna Spencer
    * ASSIGNMENT : cis255 - Program 03 - CSS and Chrome DevTools
    * URL        : csis.svsu.edu/~blspence/cis255/program03/program03.css
-   * OVERVIEW   : Favorite CSS Properties; Chrome DevTool Demonstration
+   * OVERVIEW   : CSS for program03.html
    ************************************************************************** */
 
 html {
     font-family: "Calibri", sans-serif;
 }
 
-#row {
+.row {
     float: left;
     width: 100%;
 }
 
-#column {
+.column {
     float: left;
-    width: 33.33%;
+    margin: auto 5px; /* vertical | horizontal */
+    width: 30%;
 }
 
 body {
@@ -27,10 +28,36 @@ body {
 }
 
 img {
-    width: 100%;
     border-style: solid;
     border-width: 1px;
-    border-color: #000000; /* light gray */
+    border-color: #000000;
+}
+
+#deviceSpecificText {
+    color: black;
+    text-shadow: 2px 2px #C0C0C0;
+    user-select: none;
+}
+
+/* 5 CSS Properties for Discussion ****************************************** */
+#cursorDemo {
+   cursor: zoom-in;
+}
+
+#box-shadowDemo {
+   box-shadow: 5px 10px #888888;
+}
+
+#transformDemo {
+    transform: rotate(5deg);
+}
+
+#filterDemo {
+    filter: grayscale(100%);
+}
+
+#opacityDemo {
+    opacity: 0.5;
 }
 
 /* ANIMATION **************************************************************** */
@@ -61,15 +88,21 @@ img {
 }
 
 /* MEDIA QUERY ************************************************************** */
-/* Mobile Devices (Portrait Mode) */
+/* Mobile Devices (Portrait Mode)
+   Note: this media query was tested on my Nexus 5X phone and worked properly.
+*/
 @media only screen and (max-device-width: 480px) {
-    #column {
+    .column {
         font-size: 1vw;
         width: 100%;
     }
 
     body {
         margin: auto 10%; /* vertical | horizontal */
+    }
+
+    #deviceSpecificText {
+        color: purple;
     }
 }
 

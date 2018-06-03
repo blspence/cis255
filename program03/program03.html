@@ -13,10 +13,10 @@
     Twenty CSS properties demonstrated in this file are listed below
     (refer to program03.css for implementations).
     The five properties that are also discussed are marked with asterisks.
-    * 1. z-index
-    * 2. perspective
-    * 3. grid
-    * 4. overflow
+    * 1. cursor
+    * 2. box-shadow
+    * 3. transform
+    * 4. filter
     * 5. opacity
       6. border-style
       7. border-width
@@ -24,16 +24,15 @@
       9. color
      10. font-family
      11. float
-     11. width
-     12. text-align
-     13. margin
-     14. animation-duration
-     15. animation-iteration-count
-     16. animation-name
-     17. font-size
-     18.
-     19.
-     20.
+     12. width
+     13. text-align
+     14. margin
+     15. animation-duration
+     16. animation-iteration-count
+     17. animation-name
+     18. font-size
+     19. user-select
+     20. text-shadow
     ************************************************************************ -->
 
 <html lang="en">
@@ -66,87 +65,94 @@
     <hr />
     <main>
 
-    <div id="row"> <!-- ROW1 -->
-        <!-- Property 1: z-index ******************************************* -->
-        <div id="column"> <!-- COL1 -->
-            <h3>The <i>z-index</i> Property</h3>
+    <div class="row"> <!-- ROW1 -->
+        <!-- Property 1: cursor ******************************************** -->
+        <div class="column"> <!-- COL1 -->
+            <h3>The <i>cursor</i> Property</h3>
                 <p>
                     <strong>Discussion</strong>.
-                    Discussion here. Discussion here. Discussion here.
-                    Discussion here. Discussion here. Discussion here.
+                    This property sets the mouse pointer upon hovering over a
+                    given element. This is useful to inform the user of
+                    different functionality, such as zooming in on an image.
                 </p>
                 <p>
-                    <strong>Demonstration</strong>.
-                    Demonstration here. Demonstration here. Demonstration here.
-                    Demonstration here. Demonstration here. Demonstration here.
+                    <strong>Demonstration</strong>.</br>
+                    <p id="cursorDemo">Hover over this text to change the cursor.</p>
                 </p>
         </div>
-        <!-- Property 2: perspective *************************************** -->
-        <div id="column">  <!-- COL2 -->
-            <h3>The <i>perspective</i> Property</h3>
+        <!-- Property 2: box-shadow **************************************** -->
+        <div class="column">  <!-- COL2 -->
+            <h3>The <i>box-shadow</i> Property</h3>
                 <p>
                     <strong>Discussion</strong>.
-                    Discussion here. Discussion here. Discussion here.
-                    Discussion here. Discussion here. Discussion here.
+                    This property adds one or more shadows to an element.
+                    It is useful for customizing element appearances.
                 </p>
                 <p>
                     <strong>Demonstration</strong>.
-                    Demonstration here. Demonstration here. Demonstration here.
-                    Demonstration here. Demonstration here. Demonstration here.
+                    A gray shadow is added to the rectangle.
+                    </br></br><img id="box-shadowDemo" src="ExRectangle.png" />
                 </p>
         </div>
-        <!-- Property 3: grid ********************************************** -->
-        <div id="column">  <!-- COL3 -->
-            <h3>The <i>grid</i> Property</h3>
+        <!-- Property 3: transform ***************************************** -->
+        <div class="column">  <!-- COL3 -->
+            <h3>The <i>transform</i> Property</h3>
                 <p>
                     <strong>Discussion</strong>.
-                    Discussion here. Discussion here. Discussion here.
-                    Discussion here. Discussion here. Discussion here.
+                    This property permits image transformation which aids in more
+                    expressive webpages.
                 </p>
                 <p>
-                    <strong>Demonstration</strong>.
-                    Demonstration here. Demonstration here. Demonstration here.
-                    Demonstration here. Demonstration here. Demonstration here.
+                    <strong>Demonstration</strong>. The transform property
+                    rotates the rectangle 5 degrees.
+                    </br></br><img id="transformDemo" src="ExRectangle.png" />
                 </p>
         </div>
     </div>
     <hr />
-    <div id="row"> <!-- ROW2 -->
-        <!-- Property 4: overflow ****************************************** -->
-        <div id="column"> <!-- COL1 -->
-            <h3>The <i>overflow</i> Property</h3>
+    <div class="row"> <!-- ROW2 -->
+        <!-- Property 4: filter ****************************************** -->
+        <div class="column"> <!-- COL1 -->
+            <h3>The <i>filter</i> Property</h3>
                  <p>
                     <strong>Discussion</strong>.
-                    Discussion here. Discussion here. Discussion here.
-                    Discussion here. Discussion here. Discussion here.
+                    This property defines visual effects on an image. These
+                    effects allow customization which can more align with the
+                    developer's intended theme, e.g. grayscale for images which
+                    could have been taken before the creation of color film.
                 </p>
                 <p>
                     <strong>Demonstration</strong>.
-                    Demonstration here. Demonstration here. Demonstration here.
-                    Demonstration here. Demonstration here. Demonstration here.
+                    </br><img id="filterDemo" src="ExRectangle.png" />
                 </p>
         </div>
         <!-- Property 5: opacity ******************************************* -->
-        <div id="column"> <!-- COL2 -->
+        <div class="column"> <!-- COL2 -->
             <h3>The <i>opacity</i> Property</h3>
                 <p>
                     <strong>Discussion</strong>.
-                    Discussion here. Discussion here. Discussion here.
-                    Discussion here. Discussion here. Discussion here.
+                    This property modifies transparency of an element, which
+                    is useful for setting unique webpage backgrounds.
                 </p>
                 <p>
-                    <strong>Demonstration</strong>.
-                    Demonstration here. Demonstration here. Demonstration here.
-                    Demonstration here. Demonstration here. Demonstration here.
+                    <strong>Demonstration</strong>. The opacity of the rectangle
+                    is set to .5, which is equivalent to 50% transparency.
+                    </br><img id="opacityDemo" src="ExRectangle.png" />
                 </p>
         </div>
         <!-- Animation********** ******************************************* -->
-        <div id="column"> <!-- COL3 -->
+        <div class="column"> <!-- COL3 -->
             <h3>Animation Implementation</h3>
                 <strong class="letter" id="letterS">  S </strong>
                 <strong class="letter" id="letterV">  V </strong>
                 <strong class="letter" id="letterS2"> S </strong>
                 <strong class="letter" id="letterU">  U </strong>
+
+                <p id="deviceSpecificText">
+                This text is <strong>purple</strong> on certain mobile devices.</p>
+
+                <strong><i>Original rectangle for demos</i></strong>:
+                </br><img src="ExRectangle.png" />
         </div>
     </div>
     <hr />
@@ -154,12 +160,10 @@
     <section title="ChromeDevTools">
         <h3>Chrome DevTools</h3>
             <p>
-                Here's a screenshot of the web page title changing color to
+                Here's a screenshot of the changing the webpage title color to
                 purple using Chrome DevTools.
             </p>
-        <img
-            src="ChromeDevTools.png"
-        />
+        <img width="100%" src="ChromeDevTools.png" />
     </section>
 
     </main>
