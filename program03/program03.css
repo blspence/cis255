@@ -12,31 +12,44 @@ html
     font-family: "Calibri", sans-serif;
 }
 
-#row {
+#row
+{
     float: left;
     width: 100%;
 }
 
-#column {
+#column
+{
     float: left;
     width: 33.33%;
 }
 
-body {
+body
+{
     text-align: left;
-         /* vertical | horizontal */
-    margin: auto       15%;
+    margin: auto 15%; /* vertical | horizontal */
+}
+
+img
+{
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000; /* light gray */
 }
 
 /* Media Query: Mobile Portrait Mode */
-@media only screen and (max-device-width: 480px) {
-    #column {
+@media only screen and (max-device-width: 480px)
+{
+    #column
+    {
         font-size: 1vw;
-        width: 50%;
+        width: 100%;
     }
-    body {
-             /* vertical | horizontal */
-        margin: auto       10%;
+
+    body
+    {
+        margin: auto 10%; /* vertical | horizontal */
     }
 }
 
