@@ -32,6 +32,12 @@ img {
     border-style: solid;
     border-width: 1px;
     border-color: #000000;
+    float: left;
+}
+
+#resize-img {
+    width: auto;
+    height: 283px;
 }
 
 /* id: Gray Background Color **************************************************/
