@@ -35,11 +35,21 @@
 </head>
 
 <body>
-    <form id="grayBackground"
-          action="https://github.com/blspence/cis255/tree/master/program04"
-          target="_blank">
-        <input type="submit" value="Go to GitHub" />
-    </form>
+    <div class="container-fluid" id="gray-background-color">
+        <div>
+            <form action="https://github.com/blspence/cis255/tree/master/program04"
+                  target="_blank">
+                <input id="form-button" type="submit" value="Go to GitHub" />
+            </form>
+        </div>
+        </br>
+        <div>
+            <form action="program04_explanations.html"
+                target="_blank">
+                <input id="form-button" type="submit" value="Bootstrap Explanations" />
+            </form>
+        </div>
+    </div>
 
     <!-- Navigation Bar **************************************************** -->
     <nav class="navbar navbar-inverse">
@@ -75,7 +85,7 @@
             <li data-target="#myCarousel" data-slide-to="1" id="no-link"></li>
             <li data-target="#myCarousel" data-slide-to="2" id="no-link"></li>
         </ol>
-        <div class="carousel-inner" role="listbox" id="grayBackground">
+        <div class="carousel-inner" role="listbox" id="gray-background-color">
             <div class="item active">
                 <img src="img/img_slider/0_book_window.jpg">
             </div>

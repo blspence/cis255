@@ -4,11 +4,17 @@
    * AUTHOR     : Brionna Spencer
    * ASSIGNMENT : cis255 - Program 04 - Bootstrap
    * URL        : csis.svsu.edu/~blspence/cis255/program04/program04.css
-   * OVERVIEW   : CSS for program04.html
+   * OVERVIEW   : CSS for program04.html and
+   *                      program04_bootstrap.html
    ************************************************************************** */
 
 html {
     font-family: "Calibri", sans-serif;
+}
+
+main {
+    text-align: left;
+    margin: auto 15%; /* vertical | horizontal */
 }
 
 img {
@@ -17,7 +23,12 @@ img {
     border-width: 1px;
     border-color: #000000;
 }
+/* id: Gray Background Color **************************************************/
+#gray-background-color {
+    background-color: #1D1D1D; /* gray */
+}
 
+/* id: No Link ****************************************************************/
 #no-link {
   pointer-events: none;
   cursor: default;
@@ -25,11 +36,27 @@ img {
   color: black;
 }
 
-#grayBackground {
-    background-color: #1D1D1D; /* gray */
+/* id: Form Button ************************************************************/
+#form-button {
+    color: #FFF;
+    background: #1D1D1D; /* purple 503972*/
+    border: 1px solid #FFF; /* gray */
 }
 
-/* Navigation Bar *************************************************************/
+/* class: Row *****************************************************************/
+.row {
+    float: left;
+    width: 100%;
+}
+
+/* class: Column **************************************************************/
+.column {
+    float: left;
+    margin: auto 5px; /* vertical | horizontal */
+    width: 30%;
+}
+
+/* class: Navigation Bar ******************************************************/
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
@@ -40,14 +67,14 @@ img {
     border: 0;
 }
 
-/* Navigation Bar Brand *******************************************************/
+/* class: Navigation Bar Brand ************************************************/
 .navbar-brand {
     float: left;
     min-height: 55px;
     padding: 0 15px 5px;
 }
 
-/* Navigation Bar Link ********************************************************/
+/* class: Navigation Bar Link *************************************************/
 .navbar-inverse .navbar-nav .active a,
 .navbar-inverse .navbar-nav .active a:focus,
 .navbar-inverse .navbar-nav .active a:hover {
@@ -55,7 +82,7 @@ img {
     color: #FFF; /* white */
 }
 
-/* Navigation Bar List Item ***************************************************/
+/* class: Navigation Bar List Item ********************************************/
 .navbar-inverse .navbar-nav li a {
     color: #D5D5D5; /* off-white */
 }
@@ -65,7 +92,14 @@ img {
    Note: this media query was tested on my Nexus 5X phone and worked properly.
 */
 @media only screen and (max-device-width: 480px) {
+    .column {
+        font-size: 1vw;
+        width: 100%;
+    }
 
+    main {
+        margin: auto 10%; /* vertical | horizontal */
+    }
 }
 
 /* COPYRIGHT NOTICE */
