@@ -35,19 +35,23 @@
 </head>
 
 <body>
-    <div class="container-fluid" id="gray-background-color">
-        <div>
-            <form action="https://github.com/blspence/cis255/tree/master/program04"
-                  target="_blank">
-                <input id="form-button" type="submit" value="Go to GitHub" />
-            </form>
-        </div>
-        </br>
-        <div>
-            <form action="program04_explanations.html"
-                target="_blank">
-                <input id="form-button" type="submit" value="Bootstrap Explanations" />
-            </form>
+    <div class="container" id="gray-background-color">
+        <div class="row">
+            <div class=".col-md-4">
+                <form action="https://github.com/blspence/cis255/tree/master/program04"
+                      target="_blank">
+                    <input id="form-button" type="submit" value="Go to GitHub" />
+                </form>
+            </div>
+            <div class=".col-md-4">
+                <form action="program04_explanations.html"
+                    target="_blank">
+                    <input id="form-button" type="submit" value="Bootstrap Explanations" />
+                </form>
+            </div>
+            <div class=".col-md-4">
+                <h1 style="color:white;">Richland Township Library</h1>
+            </div>
         </div>
     </div>
 
@@ -67,38 +71,151 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li>               <a href="#">Events</a></li>
-                    <li>               <a href="#">Technology</a></li>
-                    <li>               <a href="#">Resources</a></li>
-                    <li>               <a href="#">Staff</a></li>
-                    <li>               <a href="#">Hours</a></li>
-                    <li>               <a href="#">Contact Us</a></li>
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li>               <a href="#events">Events</a></li>
+                    <li>               <a href="#technology">Technology</a></li>
+                    <li>               <a href="#resources">Resources</a></li>
+                    <li>               <a href="#staff">Staff</a></li>
+                    <li>               <a href="#hours">Hours</a></li>
+                    <li>               <a href="#contact-us">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Image Slider ****************************************************** -->
-    <div id="myCarousel" class"carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" id="no-link" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1" id="no-link"></li>
-            <li data-target="#myCarousel" data-slide-to="2" id="no-link"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox" id="gray-background-color">
-            <div class="item active">
-                <img src="img/img_slider/0_book_window.jpg">
+
+    <!-- Images ************************************************************ -->
+    <div class "container" id="gray-background-color">
+        <img src="img/book_window.jpg" class="img-responsive"></>
+    </div>
+
+    <!-- Content *********************************************************** -->
+    <div class "container" id="gray-background-color">
+        <!-- Home -->
+        <div class="row" id="content">
+            <div class="col-md-6">
+                <h2 id="home">Home</h2>
+                <p id="serif-font">
+                    Richland Township Library offers books, movies, and magazines to
+                    enjoy. Our knowledgeable and friendly staff helps host a variety
+                    events for readers of all ages. We're inspiring our community,
+                    one patron at a time.
+                </p>
             </div>
-            <div class="item">
-                <img src="img/img_slider/1_read_to_tots.jpg">
+            <div class="col-md-6">
+                <img src="img/home.jpg" class="img-responsive"></>
             </div>
-            <div class="item">
-                <img src="img/img_slider/2_britannica.jpg">
+        </div>
+        </br>
+
+        <!-- Events -->
+        <div class="row" id="content">
+            <div class="col-md-6">
+                <h2 id="events">Events</h2>
+                <ul id="serif-font">
+                    <li><strong>Toddler Story Hour</strong>
+                        <ul>
+                        <li>For children 2 to 5 years</li>
+                        <li>Tuesdays at 10:30 AM</li>
+                        </ul>
+                    </li>
+                    <li><strong>2018 Summer Reading Program</strong>
+                    <ul>
+                        <li>For children 2.5 to 12 years</li>
+                        <li>June 19, 26; July 3, 10 at 10:30 AM</li>
+                    </ul>
+                    </li>
+                    <li><strong>Adult Book Club</strong>
+                        <ul>
+                        <li>4th Friday of each month</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="img/events.jpg" class="img-responsive"></>
+            </div>
+        </div>
+
+        <!-- Technology -->
+        <div class="row" id="content">
+            <div class="col-md-6">
+                <h2 id="technology">Technology</h2>
+                <ul id="serif-font">
+                    <li>Copy machine, fax machine, laminator, and printer available at a small fee</li>
+                    <li>14 desktops with Internet and Microsoft Office applications</li>
+                    <li>1 laptop for use in the library by adult patrons</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="img/technology.jpg" class="img-responsive"></>
+            </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="row" id="content">
+            <div class="col-md-6">
+                <h2 id="resources">Resources</h2>
+                <ul id="serif-font">
+                    <li><a href="https://rtl-verso.auto-graphics.com/MVC/" target="_blank">
+                        Richland Library Catalog</a></li>
+                    <li><a href="http://mel.org/" target="_blank">
+                        Michigan eLibrary (MeL) </a></li>
+                    <li><a href="https://www.learningexpresshub.com/productengine/LELIndex.html#/learningexpresslibrary/libraryhome?AuthToken=107A87A3-D316-47D1-8C53-DEF688EF23FC" target="_blank">
+                        LearningExpress Library </a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="img/resources.jpg" class="img-responsive"></>
+            </div>
+        </div>
+
+        <!-- Staff -->
+        <div class="row" id="content">
+            <div class="col-md-6">
+                <h2 id="staff">Staff</h2>
+                <ul id="serif-font">
+                    <li>Sherma Horrocks, <i>Director</i></li>
+                    <li>Mandy Bellinger, <i>Clerk</i></li>
+                    <li>Danielle Piña, <i>Clerk</i></li>
+                    <li>Debra Stratton, <i>Clerk</i></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="img/staff.jpg" class="img-responsive"></>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Hours -->
+            <div class="col-md-6" id="content">
+                <h2 id="hours">Hours</h2>
+                <ul id="serif-font">
+                    <li>Mon: 2 PM – 6 PM</li>
+                    <li>Tue: 10 AM – 5 PM</li>
+                    <li>Wed: 11 AM – 5 PM</li>
+                    <li>Thu: 11 AM – 5 PM</li>
+                    <li>Fri: 11 AM – 5 PM</li>
+                    <li>Sat: CLOSED</li>
+                    <li>Sun: CLOSED</li>
+                </ul>
+            </div>
+            <!-- Contact Us -->
+            <div class="col-md-6" id="content">
+                <h2 id="contact-us">Contact Us</h2>
+                <p id="serif-font">
+                    Richland Township Library <br />
+                    8821 Third Street PO Box 220 <br />
+                    Vestaburg, 48891 <br />
+                    <br />
+                    Phone: 989.268.5044 <br />
+                    Fax: 989.268.5629 <br />
+                    <br />
+                    <a href="rtl@richlandtownshiplibrary.com">
+                       rtl@richlandtownshiplibrary.com</a>
+                </p>
             </div>
         </div>
     </div>
-    <!-- Content *********************************************************** -->
-    <!-- TODO: tutorial @ 52:18 -->
 </body>
 
 </html>

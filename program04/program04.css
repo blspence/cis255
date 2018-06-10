@@ -9,23 +9,48 @@
    ************************************************************************** */
 
 html {
-    font-family: "Calibri", sans-serif;
+    background-color: #1D1D1D; /* gray */
+    color: #FFFFFF; /* white */
+    font-family: "Lato", sans-serif;
+    margin: auto 15%; /* vertical | horizontal */
 }
 
 main {
     text-align: left;
-    margin: auto 15%; /* vertical | horizontal */
+
+}
+
+footer {
+    width: 100%;
+    background-color: #1D1D1D;
+    padding: 3%;
+    color: #FFFFFF;
 }
 
 img {
-    margin: auto;
+    width: 100%;
     border-style: solid;
     border-width: 1px;
     border-color: #000000;
 }
+
 /* id: Gray Background Color **************************************************/
 #gray-background-color {
-    background-color: #1D1D1D; /* gray */
+    background-color: #1D1D1D;
+}
+
+/* id: Serif Font *************************************************************/
+#serif-font {
+    font-family: "Gentium Book Basic", serif;
+}
+
+/* id: Content ****************************************************************/
+#content {
+    border-style: solid;
+    border-width: 8px;
+    border-color: #1D1D1D;
+    color: #FFFFFF;
+    background-color: #4F4F4F; /* light gray */
 }
 
 /* id: No Link ****************************************************************/
@@ -38,9 +63,9 @@ img {
 
 /* id: Form Button ************************************************************/
 #form-button {
-    color: #FFF;
-    background: #1D1D1D; /* purple 503972*/
-    border: 1px solid #FFF; /* gray */
+    color: #FFFFFF;
+    background: #1D1D1D; /* purple */
+    border: 1px solid #FFFFFF;
 }
 
 /* class: Row *****************************************************************/
@@ -60,8 +85,8 @@ img {
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: #1D1D1D; /* gray */
-    color: #FFF; /* white */
+    background-color: #1D1D1D;
+    color: #FFFFFF;
     padding: 1% 0;
     font-size: 1.2em;
     border: 0;
@@ -78,8 +103,8 @@ img {
 .navbar-inverse .navbar-nav .active a,
 .navbar-inverse .navbar-nav .active a:focus,
 .navbar-inverse .navbar-nav .active a:hover {
-    background-color: rgb(29, 29, 29); /* gray */
-    color: #FFF; /* white */
+    background-color: #1D1D1D;
+    color: #FFFFFF;
 }
 
 /* class: Navigation Bar List Item ********************************************/
