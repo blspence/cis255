@@ -5,9 +5,10 @@
    * ASSIGNMENT : cis255 - Program 04 - Bootstrap
    * URL        : csis.svsu.edu/~blspence/cis255/program04/program04.css
    * OVERVIEW   : CSS for program04.html and
-   *                      program04_bootstrap.html
+   *                      program04_explanations.html
    ************************************************************************** */
 
+/* element: html **************************************************************/
 html {
     background-color: #1D1D1D; /* gray */
     color: #FFFFFF; /* white */
@@ -15,26 +16,40 @@ html {
     margin: auto 15%; /* vertical | horizontal */
 }
 
+/* element: main **************************************************************/
 main {
     text-align: left;
 
 }
 
+/* element: footer ************************************************************/
 footer {
     width: 100%;
     background-color: #1D1D1D;
-    padding: 3%;
     color: #FFFFFF;
+    float: left;
 }
 
+/* element: img ***************************************************************/
 img {
     width: 100%;
     border-style: solid;
     border-width: 1px;
     border-color: #000000;
-    float: left;
 }
 
+/* element: a (links) *********************************************************/
+a:link {
+    color: #68C0E3; /* light blue */
+}
+a:visited, a:active {
+    color: #B3B3FF; /* light purple */
+}
+a:hover {
+    color: #A9DBEF; /* lighter blue */
+}
+
+/* id: Resize Image ***********************************************************/
 #resize-img {
     width: auto;
     height: 283px;
@@ -48,15 +63,13 @@ img {
 /* id: Serif Font *************************************************************/
 #serif-font {
     font-family: "Gentium Book Basic", serif;
+    font-size: 1.15em;
 }
 
 /* id: Content ****************************************************************/
 #content {
-    border-style: solid;
-    border-width: 8px;
-    border-color: #1D1D1D;
+    border-top: solid 8px #B3B3B3;
     color: #FFFFFF;
-    background-color: #4F4F4F; /* light gray */
 }
 
 /* id: No Link ****************************************************************/
@@ -84,7 +97,7 @@ img {
 .column {
     float: left;
     margin: auto 5px; /* vertical | horizontal */
-    width: 30%;
+    width: 48%;
 }
 
 /* class: Navigation Bar ******************************************************/
@@ -100,12 +113,11 @@ img {
 
 /* class: Navigation Bar Brand ************************************************/
 .navbar-brand {
-    float: left;
     min-height: 55px;
     padding: 0 15px 5px;
 }
 
-/* class: Navigation Bar Link *************************************************/
+/* Navbar & Links *************************************************************/
 .navbar-inverse .navbar-nav .active a,
 .navbar-inverse .navbar-nav .active a:focus,
 .navbar-inverse .navbar-nav .active a:hover {
@@ -113,7 +125,7 @@ img {
     color: #FFFFFF;
 }
 
-/* class: Navigation Bar List Item ********************************************/
+/* Navigation Bar List Items **************************************************/
 .navbar-inverse .navbar-nav li a {
     color: #D5D5D5; /* off-white */
 }
