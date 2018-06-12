@@ -16,10 +16,9 @@ html {
     margin: auto 15%; /* vertical | horizontal */
 }
 
-/* element: main **************************************************************/
-main {
-    text-align: left;
-
+/* element: iframe ************************************************************/
+iframe {
+    float: bottom;
 }
 
 /* element: footer ************************************************************/
@@ -32,7 +31,9 @@ footer {
 
 /* element: img ***************************************************************/
 img {
-    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
     border-style: solid;
     border-width: 1px;
     border-color: #000000;
@@ -87,19 +88,6 @@ a:hover {
     border: 1px solid #FFFFFF;
 }
 
-/* class: Row *****************************************************************/
-.row {
-    float: left;
-    width: 100%;
-}
-
-/* class: Column **************************************************************/
-.column {
-    float: left;
-    margin: auto 5px; /* vertical | horizontal */
-    width: 48%;
-}
-
 /* class: Navigation Bar ******************************************************/
 .navbar {
     margin-bottom: 0;
@@ -128,21 +116,6 @@ a:hover {
 /* Navigation Bar List Items **************************************************/
 .navbar-inverse .navbar-nav li a {
     color: #D5D5D5; /* off-white */
-}
-
-/* MEDIA QUERY ************************************************************** */
-/* Mobile Devices (Portrait Mode)
-   Note: this media query was tested on my Nexus 5X phone and worked properly.
-*/
-@media only screen and (max-device-width: 480px) {
-    .column {
-        font-size: 1vw;
-        width: 100%;
-    }
-
-    main {
-        margin: auto 10%; /* vertical | horizontal */
-    }
 }
 
 /* COPYRIGHT NOTICE */
