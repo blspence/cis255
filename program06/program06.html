@@ -82,8 +82,7 @@
         <!-- Text Field **************************************************** -->
         <div class="row content">
             <div class="col-md-12 serif-font">
-                <br>
-                <p class="wrap" id="change-this-text">
+                <p class="wrap" id="change-this-text"><br>
                     Let jQuery AJAX change this text.
                 </p>
                 <br>
@@ -137,7 +136,7 @@
                 url: "junk.txt",
                 success: function(result)
                 {
-                    $("#change-this-text").html(result);
+                    $("#change-this-text").html("<br>" + result);
                     obj = JSON.parse(result);
                 }
             });
@@ -145,11 +144,11 @@
 
         function sortByRoom()
         {
-            var outputArr = [];
+            var output = " ";
+            var outputArr;
 
             /* Pull obj.courses into newArray */
             newArray = obj.courses;
-            outputArr.length = newArray.length;
 
             /* Sort newArray alphabetically by room */
             newArray = newArray.sort(function(a, b)
@@ -162,41 +161,47 @@
                             return  0;
             });
 
+            output = '<div class="table-responsive">,'
+                   +  '<table class="table">,'
+                   +  '<thead>,'
+                   +  '<tr>,'
+                   +  '<th>CIS 255 Courses</th>,'
+                   +  '</tr>,'
+                   +  '</thead>,'
+                   +  '<tbody>,';
+
             /* Replace paragraph contents with courses sorted by room */
             for(var i = 0; i < newArray.length; i++)
             {
-                outputArr[i] = "<p>" + newArray[i].term + " "
-                                     + newArray[i].prefix + " "
-                                     + newArray[i].courseNumber + " "
-                                     + newArray[i].section + " "
-                                     + newArray[i].meetingTimes[0].building + " "
-                                     + newArray[i].meetingTimes[0].room
-                             + "</p>";
+                output = output + "<tr id=evenORodd><td>"
+                                + newArray[i].term + " "
+                                + newArray[i].prefix + " "
+                                + newArray[i].courseNumber + " "
+                                + newArray[i].section + " "
+                                + newArray[i].meetingTimes[0].building + " "
+                                + newArray[i].meetingTimes[0].room
+                                + "</td></tr>,";
             }
+            output = output + '</tbody>'
+                   +  '</table>'
+                   +  '</div>';
 
-            /* Make each line of results alternate colors using jquery.map() */
-            outputArr = jQuery.map(outputArr, function()
+            outputArr = output.split(",");
+
+            /* Make each line of results alternate colors */
+            outputArr = jQuery.map(outputArr, function(elem, index)
             {
-                for(var i = 0; i < outputArr.length; i++)
+                if((index % 2) == 0)
                 {
-                    var n = str.indexOf("<p>");
-
-                    if((i % 0) == 0)
-                    {
-                        /* index is even */
-                        outputArr[i].insert(n + 2, " style=\"background-color:blue;\"");
-                    }
-                    else
-                    {
-                        /* index is odd */
-                        outputArr[i].insert(n + 2, " style=\"background-color:purple;\"");
-                    }
+                    return elem.replace("evenORodd", "even");
                 }
-
-                return outputArr;
+                else
+                {
+                    return elem.replace("evenORodd", "odd");
+                }
             });
 
-			/* Display results */
+            /* Display results */
             $("#change-this-text").html(outputArr);
         }
 
