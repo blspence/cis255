@@ -2,9 +2,9 @@
    * COPYRIGHT  : GNU General Public License: http://www.gnu.org/licenses/
    *              See bottom of file for details.
    * AUTHOR     : Brionna Spencer
-   * ASSIGNMENT : cis255 - Program 05 - JavaScript, AJAX, JSON
-   * URL        : csis.svsu.edu/~blspence/cis255/program05/program05.css
-   * OVERVIEW   : CSS for program05.html
+   * ASSIGNMENT : cis255 - Program 06 - jQuery, AJAX, JSON
+   * URL        : csis.svsu.edu/~blspence/cis255/program06/program06.css
+   * OVERVIEW   : CSS for program06.html
    ************************************************************************** */
 
 /* element: html **************************************************************/
@@ -28,8 +28,8 @@ footer {
     word-wrap: break-word;
 }
 
-/* id: Button *****************************************************************/
-#button {
+/* class: Button **************************************************************/
+.buttonClass {
     color: #FFFFFF;
     background-color: #286090;         /* blue */
     border-color: #204D74;             /* dark blue */

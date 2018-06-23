@@ -28,8 +28,8 @@ footer {
     word-wrap: break-word;
 }
 
-/* id: Button *****************************************************************/
-#button {
+/* class: Button **************************************************************/
+.buttonClass {
     color: #FFFFFF;
     background-color: #286090;         /* blue */
     border-color: #204D74;             /* dark blue */

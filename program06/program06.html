@@ -4,16 +4,16 @@
     * COPYRIGHT  : GNU General Public License: http://www.gnu.org/licenses/
     *              See bottom of file for details.
     * AUTHOR     : Brionna Spencer
-    * ASSIGNMENT : cis255 - Program 05 - JavaScript, AJAX, JSON
-    * URL        : csis.svsu.edu/~blspence/cis255/program05/program05.html
-    * OVERVIEW   : Use JavaScript to Display SVSU CIS 255 Course Data
+    * ASSIGNMENT : cis255 - Program 06 - jQuery, AJAX, JSON
+    * URL        : csis.svsu.edu/~blspence/cis255/program06/program06.html
+    * OVERVIEW   : Use jQuery to Display SVSU CIS 255 Course Data
     ************************************************************************ -->
 
 <html lang="en">
 
 <head>
     <!-- TAB-TITLE/FAVICON ************************************************* -->
-    <title>Program05</title>
+    <title>Program06</title>
     <link rel="icon" href="../media/cardinal_logo.png" type="image/png" />
 
     <!-- METADATA ********************************************************** -->
@@ -24,27 +24,26 @@
     <meta name="keywords" content="web, development, client side, front end" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- LOCAL CSS CONFIG ************************************************** -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="program06.css">
+
     <!-- BOOTSTRAP CONFIG ************************************************** -->
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
-    <script
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    </script>
 
-    <!-- CSS CONFIG ******************************************************** -->
-    <link rel="stylesheet" type="text/css" href="program05.css">
+    <!-- JQUERY CONFIG ************************************************** -->
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
 </head>
 
 <body>
     <!-- GitHub Button and Webpage Title *********************************** -->
     <div class="container" id="gray-background-color">
         <div class="btn-group" role="group" id="gray-background-color">
-            <a href="https://github.com/blspence/cis255/tree/master/program05"
+            <a href="https://github.com/blspence/cis255/tree/master/program06"
                target="_blank"
                class="btn btn-primary active"
                role="button"
@@ -56,7 +55,7 @@
         <div class="row">
             <div class=".col-md-12">
                 <h1 style="color:white;">
-                    The XMLHttpRequest Object
+                    Display Course Data with <strong>jQuery</strong>
                 </h1>
             </div>
         </div>
@@ -65,16 +64,16 @@
         <div class="row" id="content">
             <div class="col-md-2">
                 <button type="button"
-                        onclick="loadDoc();"
-                        id="button">
+                        id="loadDoc"
+                        class="buttonClass">
                     Change Content 1
                 </button>
             </div>
 
             <div class="col-md-2">
                 <button type="button"
-                        onclick="sortByRoom();"
-                        id="button">
+                        id="sortByRoom"
+                        class="buttonClass">
                     Change Content 2
                 </button>
             </div>
@@ -85,9 +84,28 @@
             <div class="col-md-12" id="serif-font">
                 </br>
                 <p class="wrap" id="change-this-text">
-                    Let AJAX change this text.
+                    Let jQuery AJAX change this text.
                 </p>
                 </br>
+            </div>
+        </div>
+
+        <!-- jQuery Explanations ******************************************* -->
+        <div class="row" id="content">
+            <div class="col-md-12">
+                <h3>jQuery Explanations</h3> <!-- TODO -->
+                    <ol type="a" id="serif-font">
+                        <li>
+                        The same origin policy of jQuery is a [good/bad] idea
+                        because...
+                        </li>
+                        <li>
+                        The callback function is [define here].
+                        This is [or is not] the best way to have every line
+                        of a list be a different color because...
+                        </li>
+                    </ol>
+                    </br>
             </div>
         </div>
 
@@ -108,22 +126,29 @@
         var rt = " ";
         var obj = " ";
 
+
+        $(document).ready(function()
+        {
+            $("#loadDoc").click(loadDoc);
+        });
+
+        $(document).ready(function() // todo - ensure this call works
+        {
+            $("#sortByRoom").click(sortByRoom);
+        });
+
         function loadDoc()
         {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function()
-            {
-                if((this.readyState == 4) && (this.status == 200))
+            rt = $.ajax({
+                url: "junk.txt",
+                success: function(result)
                 {
-                    rt = this.responseText;
-                    document.getElementById("change-this-text").innerHTML = rt;
-                    obj = JSON.parse(rt);
+                    $("#change-this-text").html(result);
+                    return result;
                 }
-            };
-            xhttp.open("GET",
-                       "https://api.svsu.edu/courses?prefix=CIS&courseNumber=255",
-                       true);
-            xhttp.send();
+            }).responseText;
+
+            obj = jQuery.parseJSON(rt);
         }
 
         function sortByRoom()
@@ -155,6 +180,9 @@
                         + newArray[i].meetingTimes[0].room + " <br>";
             }
 
+
+            /* Make each line of results alternate colors using jquery.map() */
+            // todo
             document.getElementById("change-this-text").innerHTML = xx;
         }
 
