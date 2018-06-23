@@ -36,8 +36,8 @@
 
 <body>
     <!-- GitHub Button and Webpage Title *********************************** -->
-    <div class="container" id="gray-background-color">
-        <div class="btn-group" role="group" id="gray-background-color">
+    <div class="container gray-background-color">
+        <div class="btn-group gray-background-color" role="group">
             <a href="https://github.com/blspence/cis255/tree/master/program05"
                target="_blank"
                class="btn btn-primary active"
@@ -56,7 +56,7 @@
         </div>
 
         <!-- 'Change Content' Buttons ************************************** -->
-        <div class="row" id="content">
+        <div class="row content">
             <div class="col-md-2">
                 <button type="button"
                         onclick="loadDoc();"
@@ -75,21 +75,21 @@
         </div>
 
         <!-- Text Field **************************************************** -->
-        <div class="row" id="content">
-            <div class="col-md-12" id="serif-font">
-                </br>
+        <div class="row content">
+            <div class="col-md-12 serif-font">
+                <br>
                 <p class="wrap" id="change-this-text">
                     Let AJAX change this text.
                 </p>
-                </br>
+                <br>
             </div>
         </div>
 
         <!-- footer ******************************************************** -->
-        <div class="row" id="content">
+        <div class="row content">
             <div class="col-md-12">
                 <footer>
-                    <p id="serif-font">
+                    <p class="serif-font">
                         &copy; 2018 Brionna Spencer.
                     </p>
                 </footer>
@@ -122,12 +122,12 @@
 
         function sortByRoom()
         {
-            xx = " ";
+            var output = " ";
 
-            /* pull obj.courses into newArray */
+            /* Pull obj.courses into newArray */
             newArray = obj.courses;
 
-            /* sort newArray alphabetically by room */
+            /* Sort newArray alphabetically by room */
             newArray = newArray.sort(function(a, b)
             {
                 var x = a.meetingTimes[0].room.toLowerCase();
@@ -138,18 +138,19 @@
                             return  0;
             });
 
-            /* replace paragraph contents with courses sorted by room */
+            /* Replace paragraph contents with courses sorted by room */
             for(var i = 0; i < newArray.length; i++)
             {
-                xx = xx + newArray[i].term + " "
-                        + newArray[i].prefix + " "
-                        + newArray[i].courseNumber + " "
-                        + newArray[i].section + " "
-                        + newArray[i].meetingTimes[0].building + " "
-                        + newArray[i].meetingTimes[0].room + " <br>";
+                output = output + newArray[i].term + " "
+                                + newArray[i].prefix + " "
+                                + newArray[i].courseNumber + " "
+                                + newArray[i].section + " "
+                                + newArray[i].meetingTimes[0].building + " "
+                                + newArray[i].meetingTimes[0].room + " <br>";
             }
 
-            document.getElementById("change-this-text").innerHTML = xx;
+			/* Display results */
+            document.getElementById("change-this-text").innerHTML = output;
         }
 
     </script>

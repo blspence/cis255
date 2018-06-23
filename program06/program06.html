@@ -41,8 +41,8 @@
 
 <body>
     <!-- GitHub Button and Webpage Title *********************************** -->
-    <div class="container" id="gray-background-color">
-        <div class="btn-group" role="group" id="gray-background-color">
+    <div class="container gray-background-color">
+        <div class="btn-group gray-background-color" role="group">
             <a href="https://github.com/blspence/cis255/tree/master/program06"
                target="_blank"
                class="btn btn-primary active"
@@ -61,7 +61,7 @@
         </div>
 
         <!-- 'Change Content' Buttons ************************************** -->
-        <div class="row" id="content">
+        <div class="row content">
             <div class="col-md-2">
                 <button type="button"
                         id="loadDoc"
@@ -80,21 +80,21 @@
         </div>
 
         <!-- Text Field **************************************************** -->
-        <div class="row" id="content">
-            <div class="col-md-12" id="serif-font">
-                </br>
+        <div class="row content">
+            <div class="col-md-12 serif-font">
+                <br>
                 <p class="wrap" id="change-this-text">
                     Let jQuery AJAX change this text.
                 </p>
-                </br>
+                <br>
             </div>
         </div>
 
         <!-- jQuery Explanations ******************************************* -->
-        <div class="row" id="content">
+        <div class="row content">
             <div class="col-md-12">
                 <h3>jQuery Explanations</h3> <!-- TODO -->
-                    <ol type="a" id="serif-font">
+                    <ol type="a" class="serif-font">
                         <li>
                         The same origin policy of jQuery is a [good/bad] idea
                         because...
@@ -105,15 +105,15 @@
                         of a list be a different color because...
                         </li>
                     </ol>
-                    </br>
+                    <br>
             </div>
         </div>
 
         <!-- footer ******************************************************** -->
-        <div class="row" id="content">
+        <div class="row content">
             <div class="col-md-12">
                 <footer>
-                    <p id="serif-font">
+                    <p class="serif-font">
                         &copy; 2018 Brionna Spencer.
                     </p>
                 </footer>
@@ -123,42 +123,35 @@
 
     <!-- script ************************************************************ -->
     <script>
-        var rt = " ";
         var obj = " ";
-
 
         $(document).ready(function()
         {
             $("#loadDoc").click(loadDoc);
-        });
-
-        $(document).ready(function() // todo - ensure this call works
-        {
             $("#sortByRoom").click(sortByRoom);
         });
 
         function loadDoc()
         {
-            rt = $.ajax({
+            $.ajax({
                 url: "junk.txt",
                 success: function(result)
                 {
                     $("#change-this-text").html(result);
-                    return result;
+                    obj = JSON.parse(result);
                 }
-            }).responseText;
-
-            obj = jQuery.parseJSON(rt);
+            });
         }
 
         function sortByRoom()
         {
-            xx = " ";
+            var outputArr = [];
 
-            /* pull obj.courses into newArray */
+            /* Pull obj.courses into newArray */
             newArray = obj.courses;
+            outputArr.length = newArray.length;
 
-            /* sort newArray alphabetically by room */
+            /* Sort newArray alphabetically by room */
             newArray = newArray.sort(function(a, b)
             {
                 var x = a.meetingTimes[0].room.toLowerCase();
@@ -169,21 +162,42 @@
                             return  0;
             });
 
-            /* replace paragraph contents with courses sorted by room */
+            /* Replace paragraph contents with courses sorted by room */
             for(var i = 0; i < newArray.length; i++)
             {
-                xx = xx + newArray[i].term + " "
-                        + newArray[i].prefix + " "
-                        + newArray[i].courseNumber + " "
-                        + newArray[i].section + " "
-                        + newArray[i].meetingTimes[0].building + " "
-                        + newArray[i].meetingTimes[0].room + " <br>";
+                outputArr[i] = "<p>" + newArray[i].term + " "
+                                     + newArray[i].prefix + " "
+                                     + newArray[i].courseNumber + " "
+                                     + newArray[i].section + " "
+                                     + newArray[i].meetingTimes[0].building + " "
+                                     + newArray[i].meetingTimes[0].room
+                             + "</p>";
             }
 
-
             /* Make each line of results alternate colors using jquery.map() */
-            // todo
-            document.getElementById("change-this-text").innerHTML = xx;
+            outputArr = jQuery.map(outputArr, function()
+            {
+                for(var i = 0; i < outputArr.length; i++)
+                {
+                    var n = str.indexOf("<p>");
+
+                    if((i % 0) == 0)
+                    {
+                        /* index is even */
+                        outputArr[i].insert(n + 2, " style=\"background-color:blue;\"");
+                    }
+                    else
+                    {
+                        /* index is odd */
+                        outputArr[i].insert(n + 2, " style=\"background-color:purple;\"");
+                    }
+                }
+
+                return outputArr;
+            });
+
+			/* Display results */
+            $("#change-this-text").html(outputArr);
         }
 
     </script>
