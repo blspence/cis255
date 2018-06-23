@@ -23,9 +23,20 @@ footer {
     float: left;
 }
 
+/* element: a (links) *********************************************************/
+a:link {
+    color: #68C0E3;                    /* light blue */
+}
+a:visited, a:active {
+    color: #B3B3FF;                    /* light purple */
+}
+a:hover {
+    color: #A9DBEF;                    /* lighter blue */
+}
+
 /* id: Even *******************************************************************/
 #even {
-    background-color: #527A7A;         /* green-blue */
+    background-color: #527A7A;         /* blue-ish green */
 }
 
 /* id: Odd ********************************************************************/
