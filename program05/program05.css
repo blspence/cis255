@@ -9,10 +9,10 @@
 
 /* element: html **************************************************************/
 html {
-    background-color: #1D1D1D; /* gray */
-    color: #FFFFFF; /* white */
+    background-color: #1D1D1D;         /* gray */
+    color: #FFFFFF;                    /* white */
     font-family: "Lato", sans-serif;
-    margin: auto 15%; /* vertical | horizontal */
+    margin: auto 15%;                  /* vertical | horizontal */
 }
 
 /* element: footer ************************************************************/
@@ -23,11 +23,16 @@ footer {
     float: left;
 }
 
+/* class: Wrap ****************************************************************/
+.wrap {
+    word-wrap: break-word;
+}
+
 /* id: Button *****************************************************************/
 #button {
-    color: #fff;
-    background-color: #286090;
-    border-color: #204d74;
+    color: #FFFFFF;
+    background-color: #286090;         /* blue */
+    border-color: #204D74;             /* dark blue */
 }
 
 /* id: Gray Background Color **************************************************/
@@ -43,8 +48,18 @@ footer {
 
 /* id: Content ****************************************************************/
 #content {
-    border-top: solid 8px #B3B3B3;
+    border-top: solid 8px #B3B3B3;     /* light gray */
     color: #FFFFFF;
+}
+
+/* MEDIA QUERY ************************************************************** */
+/* Mobile Devices (Portrait Mode)
+   Note: this media query was tested on my Nexus 5X phone and worked properly.
+*/
+@media only screen and (max-device-width: 480px) {
+    html {
+        margin: auto 10%;              /* vertical | horizontal */
+    }
 }
 
 /* COPYRIGHT NOTICE */
