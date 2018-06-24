@@ -33,15 +33,16 @@
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- JQUERY CONFIG ************************************************** -->
+    <!-- JQUERY CONFIG ***************************************************** -->
     <script
         src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
 </head>
 
 <body>
-    <!-- GitHub Button and Webpage Title *********************************** -->
     <div class="container gray-background-color">
+
+        <!-- GitHub Button ************************************************* -->
         <div class="btn-group gray-background-color" role="group">
             <a href="https://github.com/blspence/cis255/tree/master/program06"
                target="_blank"
@@ -52,6 +53,7 @@
            </a>
         </div>
 
+        <!-- Webpage Title ************************************************* -->
         <div class="row">
             <div class=".col-md-12">
                 <h1 style="color:white;">
@@ -194,6 +196,7 @@
                                 + newArray[i].meetingTimes[0].room
                                 + "</td></tr>,";
             }
+
             output = output + '</tbody>'
                    +  '</table>'
                    +  '</div>';
@@ -216,9 +219,7 @@
             /* Display results */
             $("#change-this-text").html(outputArr);
         }
-
     </script>
-
 </body>
 
 </html>
