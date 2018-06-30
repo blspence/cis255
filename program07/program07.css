@@ -1,0 +1,75 @@
+/* **************************************************************************
+   * COPYRIGHT  : GNU General Public License: http://www.gnu.org/licenses/
+   *              See bottom of file for details.
+   * AUTHOR     : Brionna Spencer
+   * ASSIGNMENT : cis255 - Program 05 - JavaScript, AJAX, JSON
+   * URL        : csis.svsu.edu/~blspence/cis255/program05/program05.css
+   * OVERVIEW   : CSS for program05.html
+   ************************************************************************** */
+
+/* element: html **************************************************************/
+html {
+    background-color: #1D1D1D;         /* gray */
+    color: #FFFFFF;                    /* white */
+    font-family: "Lato", sans-serif;
+    margin: auto 15%;                  /* vertical | horizontal */
+}
+
+/* element: footer ************************************************************/
+footer {
+    width: 100%;
+    background-color: #1D1D1D;
+    color: #FFFFFF;
+    float: left;
+}
+
+/* class: Wrap ****************************************************************/
+.wrap {
+    word-wrap: break-word;
+}
+
+/* class: Button **************************************************************/
+.buttonClass {
+    color: #FFFFFF;
+    background-color: #286090;         /* blue */
+    border-color: #204D74;             /* dark blue */
+}
+
+/* class: Gray Background Color ***********************************************/
+.gray-background-color {
+    background-color: #1D1D1D;
+}
+
+/* class: Serif Font **********************************************************/
+.serif-font {
+    font-family: "Gentium Book Basic", serif;
+    font-size: 1.15em;
+}
+
+/* class: Content *************************************************************/
+.content {
+    border-top: solid 8px #B3B3B3;     /* light gray */
+    color: #FFFFFF;
+}
+
+/* MEDIA QUERY ************************************************************** */
+/* Mobile Devices (Portrait Mode)
+   Note: this media query was tested on my Nexus 5X phone and worked properly.
+*/
+@media only screen and (max-device-width: 480px) {
+    html {
+        margin: auto 10%;              /* vertical | horizontal */
+    }
+}
+
+/* COPYRIGHT NOTICE */
+/* **************************************************************************
+   GNU General Public License (http://www.gnu.org/licenses/)
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+   ************************************************************************** */
