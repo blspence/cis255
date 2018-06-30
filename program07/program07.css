@@ -1,10 +1,8 @@
 /* **************************************************************************
-   * COPYRIGHT  : GNU General Public License: http://www.gnu.org/licenses/
-   *              See bottom of file for details.
    * AUTHOR     : Brionna Spencer
-   * ASSIGNMENT : cis255 - Program 05 - JavaScript, AJAX, JSON
-   * URL        : csis.svsu.edu/~blspence/cis255/program05/program05.css
-   * OVERVIEW   : CSS for program05.html
+   * ASSIGNMENT : cis255 - Program 07 - AngularJS
+   * URL        : csis.svsu.edu/~blspence/cis255/program07/program07.css
+   * OVERVIEW   : CSS for program07.html
    ************************************************************************** */
 
 /* element: html **************************************************************/
@@ -21,6 +19,11 @@ footer {
     background-color: #1D1D1D;
     color: #FFFFFF;
     float: left;
+}
+
+/* element: input *************************************************************/
+input {
+    color: #000000 !important;
 }
 
 /* class: Wrap ****************************************************************/
@@ -61,15 +64,3 @@ footer {
         margin: auto 10%;              /* vertical | horizontal */
     }
 }
-
-/* COPYRIGHT NOTICE */
-/* **************************************************************************
-   GNU General Public License (http://www.gnu.org/licenses/)
-   This program is free software: you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation, either version 3 of the License, or
-   (at your option) any later version.
-   This program is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-   ************************************************************************** */
