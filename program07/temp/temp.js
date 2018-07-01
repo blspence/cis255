@@ -1,8 +1,8 @@
 /* **************************************************************************
    * AUTHOR     : Brionna Spencer
    * ASSIGNMENT : cis255 - Program 07 - AngularJS
-   * URL        : csis.svsu.edu/~blspence/cis255/program07/program07.js
-   * OVERVIEW   : JavaScript for program07.html
+   * URL        : csis.svsu.edu/~blspence/cis255/program07/temp.js
+   * OVERVIEW   : JavaScript for temp.html
    ************************************************************************** */
 
 /* app: Temperature Conversion ************************************************/
@@ -16,9 +16,3 @@ tApp.controller('tempCtrl', function($scope)
     };
     $scope.convert();
 });
-
-/* app: Quadratic Formula *****************************************************/
-// TODO
-
-/* app: Cubic Formula *********************************************************/
-// TODO

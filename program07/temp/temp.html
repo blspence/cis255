@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!--************************************************************************
+    * AUTHOR     : Brionna Spencer
+    * ASSIGNMENT : cis255 - Program 07 - AngularJS
+    * URL        : csis.svsu.edu/~blspence/cis255/program07/temp.html
+    * OVERVIEW   : Temperature Conversion
+    ************************************************************************ -->
+
+<html lang="en">
+
+<head>
+    <!-- METADATA ********************************************************** -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Brionna Spencer" />
+    <meta name="copyright" content="Brionna Spencer" />
+    <meta name="keywords" content="web, development, client side, front end" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- LOCAL CSS CONFIG ************************************************** -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="../program07.css">
+
+    <!-- BOOTSTRAP CONFIG ************************************************** -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- ANGULARJS CONFIG ************************************************** -->
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+    </script>
+
+    <!-- LOCAL JAVASCRIPT CONFIG ******************************************* -->
+    <script src="temp.js"></script>
+</head>
+
+<body>
+    <!-- Temperature Conversion ******************************************** -->
+    <div class="container gray-background-color noMargins">
+        <div class="row" style="color:white;">
+            <div class="col-md-12" ng-app="tempApp" ng-controller="tempCtrl">
+                <br>
+                Fahrenheit: <input type="number" ng-model="fahrenheit"><br>
+                <button class="buttonClass" ng-click="convert()">Convert</button><br>
+                Celsius: <input ng-readonly="true" ng-model="celsius"><br>
+                <br>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

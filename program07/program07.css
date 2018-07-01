@@ -2,7 +2,7 @@
    * AUTHOR     : Brionna Spencer
    * ASSIGNMENT : cis255 - Program 07 - AngularJS
    * URL        : csis.svsu.edu/~blspence/cis255/program07/program07.css
-   * OVERVIEW   : CSS for program07.html
+   * OVERVIEW   : CSS for program07/*.html
    ************************************************************************** */
 
 /* element: html **************************************************************/
@@ -24,6 +24,13 @@ footer {
 /* element: input *************************************************************/
 input {
     color: #000000 !important;
+}
+
+/* element: iframe ************************************************************/
+iframe {
+    height: 100%;
+    width: 100%;
+    float: left;
 }
 
 /* class: Wrap ****************************************************************/
