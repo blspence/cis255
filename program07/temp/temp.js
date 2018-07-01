@@ -12,7 +12,8 @@ tApp.controller('tempCtrl', function($scope)
     /* Converts fahrenheit to celsius; rounds result to 2 decimal places */
     $scope.convert = function()
     {
-        $scope.celsius = ($scope.fahrenheit - 32) * (5/9);
+        var result = ($scope.fahrenheit - 32) * (5/9);
+        $scope.celsius = parseFloat(result.toFixed(2));
     };
     $scope.convert();
 });

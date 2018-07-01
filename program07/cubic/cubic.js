@@ -118,31 +118,31 @@ cApp.controller('cubicCtrl', function($scope)
         var x2 = roots[2];
         var x3 = roots[1];
 
-        if((x1 !== x1) || (roots.length < 1)) /* if result is NaN */
+        if(x1 !== x1) /* if result is NaN */
         {
             $scope.x1 = "NaN";
         }
         else
         {
-            $scope.x1 = x1;
+            $scope.x1 = x1.toFixed(2);
         }
 
-        if((x2 !== x2) || (roots.length < 2)) /* if result is NaN */
+        if(x2 !== x2) /* if result is NaN */
         {
             $scope.x2 = "NaN";
         }
         else
         {
-            $scope.x2 = x2;
+            $scope.x2 = x2.toFixed(2);
         }
 
-        if((x3 !== x3) || (roots.length < 3)) /* if result is NaN */
+        if(x3 !== x3) /* if result is NaN */
         {
             $scope.x3 = "NaN";
         }
         else
         {
-            $scope.x3 = x3;
+            $scope.x3 = x3.toFixed(2);
         }
     };
     $scope.calculate();
