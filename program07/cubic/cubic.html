@@ -3,8 +3,8 @@
 <!--************************************************************************
     * AUTHOR     : Brionna Spencer
     * ASSIGNMENT : cis255 - Program 07 - AngularJS
-    * URL        : csis.svsu.edu/~blspence/cis255/program07/quad.html
-    * OVERVIEW   : Quadratic Formula
+    * URL        : csis.svsu.edu/~blspence/cis255/program07/cubic.html
+    * OVERVIEW   : Cubic Formula
     ************************************************************************ -->
 
 <html lang="en">
@@ -33,20 +33,22 @@
     </script>
 
     <!-- LOCAL JAVASCRIPT CONFIG ******************************************* -->
-    <script src="quad.js"></script>
+    <script src="cubic.js"></script>
 </head>
 
 <body>
     <div class="container gray-background-color">
         <div class="row" style="color:white;">
-            <div class="col-md-12" ng-app="quadApp" ng-controller="quadCtrl">
+            <div class="col-md-12" ng-app="cubicApp" ng-controller="cubicCtrl">
                 <br>
                 a: <input type="number" ng-model="a"><br>
                 b: <input type="number" ng-model="b"><br>
                 c: <input type="number" ng-model="c"><br>
+                d: <input type="number" ng-model="d"><br>
                 <button class="buttonClass" ng-click="calculate()">Calculate</button><br>
                 x1: <input ng-readonly="true" ng-model="x1"><br>
                 x2: <input ng-readonly="true" ng-model="x2"><br>
+                x3: <input ng-readonly="true" ng-model="x3"><br>
                 <br>
             </div>
         </div>
